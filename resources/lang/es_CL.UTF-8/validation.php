@@ -151,7 +151,7 @@ return [
         'first_name' => 'Primer Nombre',
         'last_name' => 'Segundo Nombre',
         'father_surname' => 'Apellido Paterno',
-        'mother_surname' => 'Apellido Materno',
+        'username' => 'Apellido Materno',
         'message' => 'Mensaje',
         'role_id' => 'Role'
       ],

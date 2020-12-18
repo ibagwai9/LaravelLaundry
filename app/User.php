@@ -27,12 +27,12 @@ class User extends Authenticatable
    * @var array
    */
   protected $fillable = [
-    'rut',
-    'first_name',
-    'last_name',
-    'father_surname',
-    'mother_surname',
+    'role_id',
+    'name',
+    'username',
     'email',
+    'phone',
+    'address',
     'password',
     'access_web',
     'access_app',
@@ -58,7 +58,7 @@ class User extends Authenticatable
 
   public function completeName()
   {
-      return $this->attributes['first_name'] . ' ' . $this->attributes['last_name'] . ' ' . $this->attributes['father_surname'] . ' ' . $this->attributes['mother_surname'];
+      return $this->attributes['first_name'] . ' ' . $this->attributes['last_name'] . ' ' . $this->attributes['father_surname'];
   }
 
   public function routeNotificationForMail()

@@ -13,24 +13,14 @@ class PermissionsTableSeeder extends Seeder
      */
     public function run()
     {
-        $permisos = [
-          ['display_name' => 'Ver Sección Control de Acceso'],                                //
-          ['display_name' => 'Listar Usuarios'],                                              //
-          ['display_name' => 'Crear Usuarios'],                                               //
-          ['display_name' => 'Editar Usuarios'],                                              //
-          ['display_name' => 'Eliminar Usuarios'],                                            //
-          ['display_name' => 'Listar Roles'],                                                 //
-          ['display_name' => 'Crear Roles'],                                                  //
-          ['display_name' => 'Editar Roles'],                                                 //
-          ['display_name' => 'Eliminar Roles'],                                               //
-          ['display_name' => 'Listar Permisos'],                                              //
-          ['display_name' => 'Crear Permisos'],                                               //
-          ['display_name' => 'Editar Permisos'],                                              //
-          ['display_name' => 'Eliminar Permisos'],                                            //
+        $permissions = [
+          ['display_name' => 'Verified user'],                                //
+          ['display_name' => 'Manage Users'],                                 //
+          ['display_name' => 'Attending clients'],                            //
+          ['display_name' => 'Manage bills'],                                 //
         ];
 
-
-        foreach ($permisos as $item){
+        foreach ($permissions as $item){
             Permission::create([
                 'display_name'  => $item['display_name'],
                 'name'          => str_slug($item['display_name'])

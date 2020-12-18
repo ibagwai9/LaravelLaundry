@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
 	<title>{{ ENV('APP_TITLE') }}</title>
 
@@ -8,11 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="format-detection" content="telephone=no" />
-  <meta name="csrf-token" content="{{ csrf_token() }}">
+  	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta name="description" content="{{ ENV('description') }}">
 	<meta name="keywords" content="{{ ENV('keywords') }}">
 
-  <meta name="theme-color" content="#ffffff">
+ 	<meta name="theme-color" content="#ffffff">
 	<!-- Main style -->
 	<link rel="stylesheet" href="{{ mix('/css/dashboard.css') }}">
 	<link rel="stylesheet" href="{{ mix('/css/dashboard_resources.css') }}">
@@ -42,7 +41,7 @@
 			<footer class="sticky-footer bg-white">
 				<div class="container my-auto">
 					<div class="copyright text-center my-auto">
-						<span>Copyright &copy; 2019</span>
+						<span>Copyright &copy; {{date('Y')}}</span>
 					</div>
 				</div>
 			</footer>
@@ -74,27 +73,27 @@
 							dom: 't',
 							bDestroy: true,
 							language: {
-									"sProcessing":     "Procesando...",
-									"sLengthMenu":     "Mostrar _MENU_ registros",
-									"sZeroRecords":    "No se encontraron resultados",
-									"sEmptyTable":     "Ningún dato disponible en esta tabla",
-									"sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-									"sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
-									"sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+									"sProcessing":     "Processing...",
+									"sLengthMenu":     "Show _MENU_ records",
+									"sZeroRecords":    "No results found",
+									"sEmptyTable":     "No data available in this table",
+									"sInfo":           "Showing records from _START_ to _END_ out of a total of _TOTAL_ records",
+									"sInfoEmpty":      "Showing records from 0 to 0 out of a total of 0 records",
+									"sInfoFiltered":   "(filtering a total of _MAX_ records)",
 									"sInfoPostFix":    "",
-									"sSearch":         "Buscar:",
+									"sSearch":         "Look for:",
 									"sUrl":            "",
 									"sInfoThousands":  ",",
-									"sLoadingRecords": "Cargando...",
+									"sLoadingRecords": "Loading...",
 									"oPaginate": {
-											"sFirst":    "Primero",
-											"sLast":     "Último",
-											"sNext":     "Siguiente",
-											"sPrevious": "Anterior"
+											"sFirst":    "First",
+											"sLast":     "Last",
+											"sNext":     "Next",
+											"sPrevious": "Previous"
 									},
 									"oAria": {
-											"sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
-											"sSortDescending": ": Activar para ordenar la columna de manera descendente"
+											"sSortAscending":  ": Enable to sort the column in ascending order",
+											"sSortDescending": ": Activate to sort the column in descending ordere"
 									}
 							},
 							pageLength: 10
@@ -104,7 +103,7 @@
 							allowClear: true,
 							placeholder: {
 									id: '',
-									text: 'Seleccione una opción...'
+									text: 'Select an option...'
 							},
 							minimumResultsForSearch: 6
 					});

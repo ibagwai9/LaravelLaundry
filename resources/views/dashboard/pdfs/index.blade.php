@@ -9,7 +9,7 @@
       </div>
       <div class="col-6">
         <a href="#"  id="submit"  class="btn btn-success btn-icon-split float-right">
-          <span class="text">Generar y Exportar</span>
+          <span class="text">Generate & Export</span>
         </a>
       </div>
     </div>
@@ -36,7 +36,7 @@
   <div class="card-header py-3">
     <div class="row col-12">
       <div class="col-6">
-        <h6 class="m-0 font-weight-bold text-primary btn-icon-split align-bottom">Exportar por URL</h6>
+        <h6 class="m-0 font-weight-bold text-primary btn-icon-split align-bottom">Export by URL</h6>
       </div>
     </div>
   </div>
@@ -54,7 +54,7 @@
         </div>
         <div class="form-group">
             <div class="float-right">
-                <button type="submit" class="btn btn-success">Buscar y Exportar</button>
+                <button type="submit" class="btn btn-success">Search & Export</button>
             </div>
         </div>
     </form>
@@ -63,11 +63,10 @@
 </div>
 
 <div class="card shadow mb-4">
-
     <div class="card-header py-3">
       <div class="row col-12">
           <div class="col-6">
-            <h6 class="m-0 font-weight-bold text-primary btn-icon-split align-bottom">Exportar por Vista</h6>
+            <h6 class="m-0 font-weight-bold text-primary btn-icon-split align-bottom">Export by View</h6>
           </div>
       </div>
     </div>
@@ -75,7 +74,7 @@
     <div class="card-body">
 
       <a href="{{ route('dashboard::pdfs.export_by_view') }}"  target="_blank" class="btn btn-success btn-icon-split float-right">
-        <span class="text">Exportar</span>
+        <span class="text">Export</span>
       </a>
     </div>
 </div>

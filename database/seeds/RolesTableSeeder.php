@@ -14,15 +14,20 @@ class RolesTableSeeder extends Seeder
     {
         $roles = [
             [
-              'display_name' => 'Super Administrador',
+              'display_name' => 'Managing director',
               'hidden' => true,
-              'permissions' => [1,2,3,4,5,6,7,8,9,10,11,12,13]
+              'permissions' => [1,2,3,4]
             ],
             [
-              'display_name' => 'Administrador',
-              'hidden' => false,
-              'permissions' => [1,2,3,4,5,6,7,8,9,10,11,12,13]
-             ]
+                'display_name' => 'Accounter',
+                'hidden' => false,
+                'permissions' => [1,4]
+            ],
+            [
+                'display_name' => 'Attender',
+                'hidden' => false,
+                'permissions' => [1,3]
+            ]
         ];
 
         foreach ($roles as $item){

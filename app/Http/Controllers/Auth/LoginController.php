@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-     protected $redirectTo = '/';
+     protected $redirectTo = '/dashboard';
 
     /**
      * Create a new controller instance.
@@ -39,6 +39,7 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
 
     /**
      * @inheritdoc
@@ -130,14 +131,14 @@ class LoginController extends Controller
 
             if(!$user->access_web){
               return redirect()->back()->with([
-                  'message' => 'La cuenta no tiene acceso a la web',
+                  'message' => 'Activate your account fist',
                   'level' => 'warning'
               ]);
             }
 
             if (\Hash::check($request->password, $user->password)) {
               return redirect()->back()->with([
-                  'message' => 'Las credenciales son invalidas',
+                  'message' => 'Incorrect password',
                   'level' => 'warning'
               ]);
             }
@@ -145,7 +146,7 @@ class LoginController extends Controller
         }else{
 
           return redirect()->back()->with([
-              'message' => 'Las credenciales son invalidas',
+              'message' => 'Invalid credentials',
               'level' => 'warning'
           ]);
           

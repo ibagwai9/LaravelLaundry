@@ -13,9 +13,11 @@
 //\URL::forceScheme('https');
 
 
-Route::get('/', 'Dashboard\HomeController@index')->name('index');
+Route::get('/', 'MainController@index')->name('index');
 
-Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login.form');
+Route::get('/register', 'Auth\RegisterController@showRegForm')->name('register.form');
+Route::post('/register', 'Auth\RegisterController@create')->name('register');
+Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/login', 'Auth\LoginController@login')->name('login');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');

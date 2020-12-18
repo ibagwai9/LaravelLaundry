@@ -2,7 +2,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
   <!-- Sidebar - Brand -->
-  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard::index') }}">
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard::index') }}"> 
     <div class="sidebar-brand-text mx-3"><img src="/img/logo.png" alt="logo" class="img-thumbnail"></div>
   </a>
 
@@ -13,7 +13,7 @@
   <li class="nav-item active">
     <a class="nav-link" href="{{route('dashboard::index')}}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Inicio</span></a>
+      <span>Dashboard</span></a>
   </li>
 
   <!-- Divider -->
@@ -28,13 +28,13 @@
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
       <i class="fas fa-fw fa-wrench"></i>
-      <span>Control de acceso</span>
+      <span>Access control</span>
     </a>
     <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item" href="{{ route('dashboard::users.index') }}">Colaboradores</a>
+        <a class="collapse-item" href="{{ route('dashboard::users.index') }}">Colaborators</a>
         <a class="collapse-item" href="{{ route('dashboard::roles.index') }}">Roles</a>
-        <a class="collapse-item" href="{{ route('dashboard::permissions.index') }}">Permisos</a>
+        <a class="collapse-item" href="{{ route('dashboard::permissions.index') }}">Permissions</a>
       </div>
     </div>
   </li>
@@ -42,11 +42,11 @@
   <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities2" aria-expanded="true" aria-controls="collapseUtilities2">
       <i class="fas fa-fw fa-wrench"></i>
-      <span>Otro</span>
+      <span>Other</span>
     </a>
     <div id="collapseUtilities2" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item" href="{{ route('dashboard::pdfs.index') }}">Exportaciones a pdf</a>
+        <a class="collapse-item" href="{{ route('dashboard::pdfs.index') }}">Exportation to pdf</a>
       </div>
     </div>
   </li>

@@ -1,10 +1,6 @@
 /node_modules
 /public/hot
 /public/mix-manifest.json
-/public/js
-/public/css
-/public/img
-/public/fonts
 /public/vendor
 /public/storage
 /storage/*.key
@@ -17,3 +13,4 @@ npm-debug.log
 yarn-error.log
 composer.lock
 package-lock.json
+ 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
 	<title>{{ ENV('APP_TITLE') }}</title>
@@ -20,10 +20,10 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-info">
 
 	<div class="container">
-					@yield('content')
+		@yield('content')
 	</div>
 
 

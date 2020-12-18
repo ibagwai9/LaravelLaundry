@@ -61,7 +61,7 @@ class Handler extends ExceptionHandler
             return response()->json(['error' => 'Unauthenticated.'], 401);
         }
 
-        return redirect()->route('login.form');
+        return redirect()->route('login');
     }
 
     public function render($request, Exception $exception)
@@ -84,7 +84,7 @@ class Handler extends ExceptionHandler
       }
 
       if($exception instanceof \Illuminate\Auth\AuthenticationException ){
-        return redirect()->route('login.form');
+        return redirect()->route('login');
       }
 
       return parent::render($request, $exception);

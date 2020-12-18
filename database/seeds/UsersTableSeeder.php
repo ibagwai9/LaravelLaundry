@@ -14,17 +14,28 @@ class UsersTableSeeder extends Seeder
     {
       $users = [
           [
-            'rut' => '1-9',
-            'first_name' => 'Hola',
-            'last_name' => 'Mundo',
-            'father_surname' => 'Real',
-            'mother_surname' => 'Desarrolladores',
-            'email' => 'hola@mundo.com',
+            'role_id' => '1',
+            'name' => 'Admin',
+            'username' => 'SuperAdmin',
+            'phone' => '08012345678',
+            'email' => 'manager@mclean.com',
+            'address' => 'MClean Main branch',
             'access_web' =>  true,
             'access_app' =>  true,
-            'password' => 'holamundo',
+            'password' => 'secret',
             'hidden' => true,
-            'role' => 'super-administrador'
+          ],
+          [
+            'role_id' => '2',
+            'name' => 'Ishaq Ibrahim',
+            'username' => 'iBagwai',
+            'phone' => '07012345678',
+            'email' => 'ibagwai9@gmail.com',
+            'address' => 'Mabuga QTRS, Bagwai town',
+            'access_web' =>  true,
+            'access_app' =>  true,
+            'password' => 'secret',
+            'hidden' => true
           ]
 
       ];
@@ -32,19 +43,19 @@ class UsersTableSeeder extends Seeder
       foreach ($users as $item){
 
           $user = User::create([
-              'rut' => $item['rut'],
-              'first_name' => $item['first_name'],
-              'last_name' => $item['last_name'],
-              'father_surname' => $item['father_surname'],
-              'mother_surname' => $item['mother_surname'],
+              'role_id' => $item['role_id'],
+              'name' => $item['name'],
+              'username' => $item['username'],
+              'phone' => $item['phone'],
               'email' => $item['email'],
+              'address' => $item['address'],
               'access_web' =>  $item['access_web'],
               'access_app' =>  $item['access_app'],
               'password' => $item['password'],
               'hidden' => $item['hidden']
           ]);
 
-          $user->assignRole($item['role']);
+         // $user->assignRole($item['role']);
 
       }
 

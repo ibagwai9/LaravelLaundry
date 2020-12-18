@@ -1,7 +1,7 @@
 <table>
     <thead>
     <tr>
-        <th>Nombre</th>
+        <th>Name</th>
         <th>Email</th>
     </tr>
     </thead>
