@@ -10,7 +10,9 @@
 
 <!-- Content Row -->
 <div class="row">
-
+  @can('serve-clients')
+    <h1>Yes</h1>
+  @endcan
 </div>
 
 

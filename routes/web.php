@@ -12,9 +12,8 @@
 */
 //\URL::forceScheme('https');
 
-
+Auth::routes(['verify' => true]);
 Route::get('/', 'MainController@index')->name('index');
-
 Route::get('/register', 'Auth\RegisterController@showRegForm')->name('register.form');
 Route::post('/register', 'Auth\RegisterController@create')->name('register');
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');

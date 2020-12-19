@@ -1,77 +1,66 @@
 @extends('auth.layout')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card card-default">
-                <div class="card-header">Register</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+<div class="row justify-content-center">
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
+  <div class="col-xl-6 col-lg-6 col-md-8">
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Register
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+    <div class="card o-hidden border-0 shadow-lg my-5">
+      <div class="card-body p-0">
+        <!-- Nested Row within Card Body -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="p-5">
+              <div class="text-center">
+                <h1 class="h4 text-gray-900 mb-4">
+                  <img src="/img/logo.png" class="responsive-img">
+                </h1>
+              </div>
+              <form method="POST" action="{{ route('register') }}" class="user" id="formLogin">
+                {{ csrf_field() }}
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control form-control-user" placeholder="Enter your name">
                 </div>
+                <div class="form-group">
+                  <input type="text" name="username" class="form-control form-control-user" placeholder="Create username">
+                </div>
+                <div class="form-group">
+                    <input type="number" name="phone" class="form-control form-control-user" placeholder="Phone number...">
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" class="form-control form-control-user" placeholder="Enter Email Address...">
+                </div>
+                <div class="form-group">
+                    <textarea name="address" class="form-control form-control-user" placeholder="Enter your residential address..."></textarea>
+                  </div>
+                <div class="form-group">
+                  <input type="password" name="password" class="form-control form-control-user" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password_confirmation" class="form-control form-control-user" placeholder="Confirm password">
+                  </div>
+                <button type="submit" class="btn btn-info btn-user btn-block">
+                  Signup
+                </button>
+              </form>
+              <hr>
+              <div class="text-center">
+                Already you have an account? <a class="small" href="{{route('login')}}">Go to login</a>                
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+
+  </div>
 </div>
-@endsection
+
+
+
+@stop
+
+@section('js-validation')
+    {!! JsValidator::formRequest(\App\Http\Requests\RegistrationRequest::class, '#formLogin') !!}
+@stop
